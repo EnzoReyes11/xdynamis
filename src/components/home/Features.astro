@@ -1,0 +1,61 @@
+---
+const features = [
+  {
+    title: 'Alianzas',
+    description: 'En XDYNAMIS sabemos que la unión hace a la fuerza, junto a los mejores profesionales, a las Organizaciones, Cámaras, y Fundaciones, juntos trabajamos para Usted. Nuestras alianzas nos permiten llegar a todo el país, coordinando desde Buenos Aires las mejores soluciones a las problemáticas planteadas.',
+    items: ['Organizaciones', 'Cámaras', 'Consultoras', 'Universidades'],
+  },
+  {
+    title: 'Formulación',
+    description: 'Desarrollo de estrategias pasando por la revisión de valores, visión y misión de la empresa.',
+    items: ['Diagnóstico de necesidades, FODA.', 'Presentación ante las entidades del programa solicitado.'],
+  },
+  {
+    title: 'Capacitaciones y Consultorias',
+    description: 'Los RRHH son el activo más valioso que una empresa eficiente tiene hoy en día. Cuanto más desarrolle las habilidades de su gente, más efectiva y eficiente será su organización.',
+    items: [
+      'Idiomas (Inglés – Francés – Chino – Portugués)',
+      'Sistemas',
+      'Marketing',
+      'Liderazgo',
+      'Finanzas',
+      'Calidad',
+      'Trabajo en Equipo',
+      'Resolución de Problemas',
+      'Mejora en las técnicas de ventas',
+      'Ventas',
+      'Plan de negocio',
+      'Administración del tiempo',
+      'Comercio exterior',
+    ],
+  },
+];
+---
+<section id="que-hacemos" class="py-20 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-800">¿Qué Hacemos?</h2>
+      <p class="text-lg text-gray-600 max-w-3xl mx-auto mt-4">
+        XDynamis es una consultora que desde el 2006 facilita soluciones de Formulación, Gestión de Proyectos y Capacitación para las pequeñas, medianas y grandes empresas.
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {features.map(feature => (
+        <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+          <h3 class="text-2xl font-bold text-gray-800 mb-4">{feature.title}</h3>
+          <p class="text-gray-600 mb-4">{feature.description}</p>
+          <ul class="space-y-2">
+            {feature.items.map(item => (
+              <li class="flex items-center">
+                <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span class="text-gray-700">{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

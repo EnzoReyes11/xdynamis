@@ -1,65 +1,119 @@
 ---
 import Layout from '../layouts/Layout.astro';
----
 
+const teamExpertise = [
+  'Dirección',
+  'Ingeniería Textil',
+  'Ingenieros Técnicos',
+  'Lic en Economía',
+  'Lic en Finanzas',
+];
+
+const services = [
+  {
+    title: 'Capacitación',
+    description: 'Los RRHH son el activo más valioso que una empresa eficiente tiene hoy en día. Cuanto más desarrolle las habilidades de su gente, más efectiva y eficiente será su organización.',
+    items: [
+      'Relevamiento de las necesidades de capacitación.',
+      'Dictado de cursos, talleres y seminarios.',
+      'Programas de capacitación para Empresas.',
+      'Jornadas de Actualización profesional.',
+      'Medición de resultados y evaluación de la capacitación.',
+    ],
+  },
+  {
+    title: 'Consultoría',
+    description: 'Brindamos un servicio de consultoría en seguros y tecnología, aportando nuestra experiencia para la optimización de los procesos y circuitos de la compañía.',
+    items: [
+      'Asesoramiento en la gestión integral de la Empresa.',
+      'Asistencia para el acceso al crédito.',
+      'Desarrollo de nuevos negocios.',
+      'Optimización de los circuitos administrativos.',
+      'Reducción de costos.',
+      'Tablero de comando.',
+    ],
+  },
+  {
+    title: 'Alianzas',
+    description: 'En XDYNAMIS sabemos que la unión hace a la fuerza, junto a los mejores profesionales, a las Organizaciones, Cámaras, y Fundaciones, juntos trabajamos para Usted.',
+    items: [
+      'Acuerdos con Cámaras, Grupos y Asociaciones.',
+      'Convenios con Universidades y Centros de formación profesional.',
+      'Consultores Asociados.',
+    ],
+  },
+  {
+    title: 'Formulación',
+    description: 'Desarrollo de estrategias pasando por la revisión de valores, visión y misión de la empresa.',
+    items: [
+      'Diagnóstico de necesidades, FODA.',
+      'Presentación ante las entidades del programa solicitado.',
+    ],
+  },
+];
+---
 <Layout>
-  <main class="container mx-auto px-4 py-12">
-    <section id="quienes-somos">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
-        <div class="prose lg:prose-xl">
-          <h2 class="text-3xl font-bold mb-4">¿Quiénes somos?</h2>
-          <p>Conformada por profesionales que conocen tanto la administración empresarial y sus finanzas como la producción y comercialización de productos, XDYNAMIS analiza su empresa valorando todas sus áreas y recursos; concentrandose en potenciar y ayudar a las PYMES a través de la implementación de distintas herramientas y programas.</p>
-          <p class="mt-8 italic text-gray-600">“Creemos en el potencial del capital humano y en la gestión de los recursos existentes para el desarrollo de las ventajas competitivas de la Empresa.”</p>
-          <p class="mt-4 font-bold text-right">- Cr. Sergio G. Asseph / Director -</p>
+  <section class="bg-gray-100 py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h1 class="text-4xl md:text-6xl font-bold text-gray-800">¿Quiénes Somos?</h1>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+        <div>
+          <p class="text-lg text-gray-700 leading-relaxed mb-6">
+            Conformada por profesionales que conocen tanto la administración empresarial y sus finanzas como la producción y comercialización de productos, XDYNAMIS analiza su empresa valorando todas sus áreas y recursos; concentrandose en potenciar y ayudar a las PYMES a través de la implementación de distintas herramientas y programas.
+          </p>
+          <div class="bg-gray-50 p-6 rounded-lg">
+            <h3 class="text-xl font-bold text-gray-800 mb-4">Nuestro Equipo se Compone de Expertos en:</h3>
+            <ul class="space-y-2">
+              {teamExpertise.map(expertise => (
+                <li class="flex items-center">
+                  <svg class="w-5 h-5 text-blue-600 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                  <span class="text-gray-700">{expertise}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
         <div>
           <img src="/images/quienes-somos.jpg" alt="Equipo de XDynamis" class="w-full h-auto object-cover rounded-lg shadow-lg" />
         </div>
       </div>
-      <div class="mt-12">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-          <div>
-            <h3 class="text-2xl font-bold mb-4">Capacitación</h3>
-            <p>Los RRHH son el activo más valioso que una empresa eficiente tiene hoy en día. Cuanto más desarrolle las habilidades de su gente, más efectiva y eficiente será su organización. Acérquese y/o contactenos y lo asesoraremos para que su empresa aumente el valor y la calidad de su gestión.</p>
-            <ul class="list-disc list-inside mt-4">
-              <li>Relevamiento de las necesidades de capacitación.</li>
-              <li>Dictado de cursos, talleres y seminarios.</li>
-              <li>Programas de capacitación para Empresas.</li>
-              <li>Jornadas de Actualización profesional.</li>
-              <li>Medición de resultados y evaluación de la capacitación.</li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="text-2xl font-bold mb-4">Consultoría</h3>
-            <p>Brindamos un servicio de consultoría en seguros y tecnología, aportando nuestra experiencia para la optimización de los procesos y circuitos de la compañía.</p>
-            <ul class="list-disc list-inside mt-4">
-              <li>Asesoramiento en la gestión integral de la Empresa.</li>
-              <li>Asistencia para el acceso al crédito.</li>
-              <li>Desarrollo de nuevos negocios.</li>
-              <li>Optimización de los circuitos administrativos.</li>
-              <li>Reducción de costos.</li>
-              <li>Tablero de comando.</li>
-            </ul>
-          </div>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-2xl font-bold mb-4">Alianzas</h3>
-          <p>En XDYNAMIS sabemos que la unión hace a la fuerza, junto a los mejores profesionales, a las Organizaciones, Cámaras, y Fundaciones, juntos trabajamos para Usted. Nuestras alianzas nos permiten llegar a todo el país, coordinando desde Buenos Aires las mejores soluciones a las problemáticas planteadas.</p>
-          <ul class="list-disc list-inside mt-4">
-            <li>Acuerdos con Cámaras, Grupos y Asociaciones.</li>
-            <li>Convenios con Universidades y Centros de formación profesional.</li>
-            <li>Consultores Asociados.</li>
-          </ul>
-        </div>
-        <div class="mt-8">
-          <h3 class="text-2xl font-bold mb-4">Formulación</h3>
-          <p>Desarrollo de estrategias pasando por la revisión de valores, visión y misión de la empresa.</p>
-          <ul class="list-disc list-inside">
-            <li>Diagnóstico de necesidades, FODA.</li>
-            <li>Presentación ante las entidades del programa solicitado.</li>
-          </ul>
-        </div>
+    </div>
+  </section>
+
+  <section class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-3xl mx-auto">
+        <p class="text-2xl text-gray-700 italic">
+          “Mi formación profesional me permite dirigir y coordinar el equipo para analizar el momento de su empresa y establecer sus necesidades. Una vez obtenido el diagnóstico, le ofrecemos la mejor cartera de cursos de capacitación disponibles en el mercado.”
+        </p>
+        <p class="mt-4 font-bold text-gray-800">- Paola Di Buccio, Directora de XDYNAMIS</p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
+
+  <section class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {services.map(service => (
+          <div class="bg-gray-50 p-8 rounded-lg shadow-md">
+            <h3 class="text-2xl font-bold text-gray-800 mb-4">{service.title}</h3>
+            <p class="text-gray-600 mb-4">{service.description}</p>
+            <ul class="space-y-2">
+              {service.items.map(item => (
+                <li class="flex items-start">
+                  <svg class="w-5 h-5 text-blue-600 mr-2 mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                  <span class="text-gray-700">{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
 </Layout>

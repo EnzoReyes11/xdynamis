@@ -1,11 +1,101 @@
 ---
-import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Header from '../components/Header.astro';
 ---
 
 <Layout>
-	<Welcome />
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section text-center">
+      <div class="relative">
+        <img src="/images/slider/1.jpg" alt="Slider Image 1" class="w-full h-96 object-cover" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white p-4">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">Soluciones Tecnológicas</h1>
+          <p class="text-lg md:text-xl max-w-2xl">Aportamos nuestra experiencia para la optimización de los procesos de la compañía.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="potencia-pyme" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">XDYNAMIS POTENCIA TU PYME</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+          <div class="prose lg:prose-lg">
+            <p>Conformada por profesionales que conocen tanto la administración empresarial y sus finanzas como la producción y comercialización de productos, XDYNAMIS analiza su empresa valorando todas sus áreas y recursos; concentrandose en potenciar y ayudar a las PYMES a través de la implementación de distintas herramientas y programas.</p>
+          </div>
+          <div class="prose lg:prose-lg">
+            <p>Los RRHH son el activo más valioso que una empresa eficiente tiene hoy en día. Cuanto más desarrolle las habilidades de su gente, más efectiva y eficiente será su organización. Acérquese y/o contactenos y lo asesoraremos para que su empresa aumente el valor y la calidad de su gestión.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Que Hacemos Section -->
+    <section id="que-hacemos" class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4 text-center">
+        <h2 class="text-3xl font-bold mb-4">¿Qué Hacemos?</h2>
+        <p class="max-w-3xl mx-auto mb-12 text-gray-600">
+          XDynamis es una consultora que desde el 2006 facilita soluciones de Formulación, Gestión de Proyectos y Capacitación para las pequeñas, medianas y grandes empresas. XDynamis le propone crecer juntos, invirtiendo en el potencial de sus recursos y de su personal, encontrando dentro de las posibilidades de soluciones detectadas.
+        </p>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 text-left">
+          <!-- Alianzas -->
+          <div class="feature-card p-6">
+            <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-center">Alianzas</h3>
+            <p class="text-gray-600">En XDYNAMIS sabemos que la unión hace a la fuerza, junto a los mejores profesionales, a las Organizaciones, Cámaras, y Fundaciones, juntos trabajamos para Usted. Nuestras alianzas nos permiten llegar a todo el país, coordinando desde Buenos Aires las mejores soluciones a las problemáticas planteadas.</p>
+            <ul class="text-gray-600 list-disc list-inside space-y-1">
+              <li>Organizaciones</li>
+              <li>Cámaras</li>
+              <li>Consultoras</li>
+              <li>Universidades</li>
+            </ul>
+          </div>
+          <!-- Formulación -->
+          <div class="feature-card p-6">
+            <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-center">Formulación</h3>
+            <p class="text-gray-600">Desarrollo de estrategias pasando por la revisión de valores, visión y misión de la empresa.</p>
+            <ul class="text-gray-600 list-disc list-inside space-y-1">
+              <li>Diagnóstico de necesidades, FODA.</li>
+              <li>Presentación ante las entidades del programa solicitado.</li>
+          </div>
+          <!-- Capacitaciones -->
+          <div class="feature-card p-6">
+            <div class="flex justify-center mb-4">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-5.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222 4 2.222V20" />
+                </svg>
+            </div>
+            <h3 class="text-xl font-bold mb-2 text-center">Capacitaciones y Consultorias</h3>
+            <ul class="text-gray-600 list-disc list-inside space-y-1">
+                <li>Idiomas (Inglés – Francés – Chino – Portugués)</li>
+                <li>Sistemas</li>
+                <li>Marketing</li>
+                <li>Liderazgo</li>
+                <li>Finanzas</li>
+                <li>Calidad</li>
+                <li>Trabajo en Equipo</li>
+                <li>Resolución de Problemas</li>
+                <li>Mejora en las técnicas de ventas</li>
+                <li>Ventas</li>
+                <li>Plan de negocio</li>
+                <li>Administración del tiempo</li>
+                <li>Comercio exterior</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 </Layout>

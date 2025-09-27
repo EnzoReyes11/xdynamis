@@ -1,0 +1,50 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout>
+  <main class="container mx-auto px-4 py-12">
+    <section id="contacto">
+      <h2 class="text-3xl font-bold text-center mb-8">Contacto</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Dejanos tu consulta</h3>
+          <p class="mb-8 text-gray-600">Nos pondremos en contacto a la brevedad.</p>
+          <form action="#" method="POST">
+            <div class="mb-4">
+              <label for="name" class="block text-gray-700 font-bold mb-2">Nombre</label>
+              <input type="text" id="name" name="name" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+            <div class="mb-4">
+              <label for="email" class="block text-gray-700 font-bold mb-2">Email</label>
+              <input type="email" id="email" name="email" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600">
+            </div>
+            <div class="mb-4">
+              <label for="message" class="block text-gray-700 font-bold mb-2">Mensaje</label>
+              <textarea id="message" name="message" rows="5" class="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-700 transition duration-300">Enviar Mensaje</button>
+          </form>
+        </div>
+        <div>
+          <h3 class="text-2xl font-bold mb-4">Nuestra Ubicación</h3>
+          <div class="mb-4">
+            <p class="font-bold">Dirección:</p>
+            <p>El Salvador 5673 3 A, CABA, Argentina</p>
+          </div>
+          <div class="mb-4">
+            <p class="font-bold">Teléfono:</p>
+            <p>+54 11 3979 0313</p>
+          </div>
+          <div class="mb-4">
+            <p class="font-bold">Email:</p>
+            <p><a href="mailto:info@xdynamis.com.ar" class="text-blue-600 hover:underline">info@xdynamis.com.ar</a></p>
+          </div>
+          <div class="mt-8">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.935825389923!2d-58.4419958847698!3d-34.58049998046554!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb58c1a8e1e4b%3A0x6bfe5c2b0e2b1e8d!2sEl%20Salvador%205673%2C%20C1414BQE%20CABA%2C%20Argentina!5e0!3m2!1sen!2sus!4v1684343232888!5m2!1sen!2sus" width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+</Layout>
